@@ -1,13 +1,14 @@
 let lista = [];
-let pHTML = document.getElementById('listaValores')
+let pHTML = document.getElementById('listaValores');
+let rest = document.getElementById('Resultado');
 
 
 function anadirValor(){
     let valorInput = parseFloat(document.querySelector('input').value);
     if(!isNaN(valorInput)){
         lista.push(valorInput);
+        pHTML.textContent = lista;
         limpiarInput('numero');
-        pHTML.textContent = lista
     }else{
         alert("Ingresa valores")
     }
@@ -47,7 +48,7 @@ function resultado(){
 }
 
 function resetear(){
-    resultado.textContent = ""
-    listaHTML.textContent = ""
+    rest.textContent = ""
+    pHTML.textContent = ""
     listaValores.length = 0
 }
