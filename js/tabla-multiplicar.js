@@ -1,20 +1,20 @@
-function mostrar(atributo, valor) {
-    let a = document.querySelector(atributo);
-    a.innerHTML += valor; // Reemplazamos el contenido existente con el nuevo valor
-}
-function borrar(atributo){
-    let a= document.querySelector(atributo);
-    a.innerHTML = ""
-}
-
 function multiplicar() {
     let numero = parseFloat(document.getElementById('numero').value);
-    borrar('p');
-    borrar('#resultado')
-    mostrar('p', 'Tabla de multiplicar del ' + numero + '<br>'); // Mostramos el encabezado
-    for (var i = 1; i < 11; i++) {
-        let resultado = numero * i;
-        mostrar('#resultado', numero + 'x' + i + ' = ' + resultado + '<br>'); // Agregamos cada resultado a la tabla
+    let texto = document.getElementById('texto')
+    let ul = document.createElement('ul');
+    
+    if(!isNaN(numero)){
+        texto.textContent = `La tabla de multiplicar del numero ${numero} es:`
+        for (var i = 1; i < 11; i++) {
+            let resultado = numero * i;
+            let li = document.createElement('li');
+            let texto = document.createTextNode(numero + 'x' + i + ' = ' + resultado)
+            li.appendChild(texto);
+            ul.appendChild(li);
     }
+    }else{
+        alert("Ingresa un valor en el input")
+    }
+    mostrar('#tabla',ul,"numero");// Agregamos cada resultado a la tabla
+}  
 
-}
