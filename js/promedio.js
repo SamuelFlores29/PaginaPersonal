@@ -4,15 +4,31 @@ var listaValores = [];
 
 function anadirValor(){
     let valor = parseFloat(document.querySelector("input").value);
-    listaValores.push(valor)
-    limpiar('listaValores');
-    mostrar('#listaValores',listaValores,'numero');
+    if(!isNaN(valor)){
+        listaValores.push(valor)
+        listaHTML.textContent = listaValores;
+        limpiarInput('numero');
+        console.log(listaValores)
+    }else{
+        alert("Porfavor ingrese valor al input")
+    }
 }
 
 function promedio(){
     var suma = 0;
-    for(let i = 0; i <= listaValores.length -1; i++){
-     suma += listaValores[i]; 
+    if(listaValores.length === 0){
+        alert("Añada valores a lista")
+    }else{
+        for(let i = 0; i <= listaValores.length -1; i++){
+            suma += listaValores[i]; 
+           }
+           resultado.innerHTML = `El promedio es ${suma/listaValores.length}`
     }
-    resultado.innerHTML = `El promedio es ${suma/listaValores.length}`
+    
+}
+
+function resetear(){
+    resultado.textContent = ""
+    listaHTML.textContent = ""
+    listaValores.length = 0
 }
