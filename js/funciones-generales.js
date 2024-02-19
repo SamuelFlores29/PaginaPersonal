@@ -11,3 +11,4 @@ function mostrar(etiqueta,texto,idInput){
 function limpiarInput(idInput){
     document.getElementById(idInput).value = "";
 }
+

@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/style-sumaValores.css">
 </head>
 <body>
-    <input type="number">
-    <button onclick="anadirValor();">Ingresa valores a la lista</button>
-    <button onclick="promedio();">Calcula el prodio de valores</button><br>
-    <p>La lista de valores es: <span id="listaValores"></span></p>
-    <p id="Resultado"></p>
+    <header>
+        <h1>
+            Calculadora 
+        </h1>
+       
+    </header>
+    <main>
+        <div class="Data">
+            <input type="number" id="numero" placeholder="Añade valores a la lista">
+            <button class="reset" onclick="resetear();">Resetear lista</button>
+        </div>
+        <button class="Calcular" onclick="anadirValor();">Ingresa valores a la lista</button>
+        <button class="Calcular" onclick="promedio();">Calcula la suma de valores</button><br>
+        <p>La lista de valores es: <span id="listaValores"></span></p>
+        <p id="Resultado"></p>
+        <button class="regreso" ><a href="../index.html">Regresa a la pagina principal</a></button>
+    </main>
+    
+    <script src="..//js/funciones-generales.js"></script>
     <script src="../js/suma-valores.js"></script>
 </body>
 </html>

@@ -1,42 +1,53 @@
 let lista = [];
+let pHTML = document.getElementById('listaValores')
 
-function AnadirValor(){
-    let valorCaja = document.querySelector("input").value;
-        if(valorCaja != ""){
-            lista.push(valorCaja);
-            limpiar();
-        }else{
-            alert("Ingresa un valor valido")
-        }
 
-    console.log(lista);
-}
-
-function limpiar(){
-    document.querySelector("input").value = ""
-}
-
-function modificarDocumento(elemento,valor){
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = valor;
-}
-
-function EncuentraValor(){
-    let encuentro = false;
-    let indice = -1 
-    let valorCaja = document.querySelector("input").value
-        for(let i = 0; i <= lista.length -1 ; i++){
-            if(valorCaja == lista[i]){
-                encuentro = true;
-                indice = i;
-                break
-            }
-    }
-    if(encuentro){
-        modificarDocumento("p", "El valor si se encuentra y esta en la posicion "+ indice)
+function anadirValor(){
+    let valorInput = parseFloat(document.querySelector('input').value);
+    if(!isNaN(valorInput)){
+        lista.push(valorInput);
+        limpiarInput('numero');
+        pHTML.textContent = lista
     }else{
-        modificarDocumento("p", "El valor no se encuentra")
-
+        alert("Ingresa valores")
     }
+}
+
+function buscar(){
+    let valorInput = parseFloat(document.querySelector('input').value);
+    if(lista.length === 0){
+        alert("La lista esta vacia")
+    }else{
+        for(let i = 0; i < lista.length; i++){
+            if(lista[i]== valorInput){
+                return true
+            }
+        }
+        return false
+    }
+}
+
+
+function resultado(){
+    let valorInput = parseFloat(document.querySelector('input').value);
     
+    if(!isNaN(valorInput)){
+        if(buscar()){
+            let p = document.createElement('p')
+            p.textContent = "Se encontro el numero"
+            mostrar("#Resultado",p,"numero");
+        }else{
+            let p = document.createElement('p')
+            p.textContent = "No se encontro el numero"
+            mostrar("#Resultado",p,"numero")
+    }
+    }else{
+        alert("Ingrese un valor para buscarlo")
+    }
+}
+
+function resetear(){
+    resultado.textContent = ""
+    listaHTML.textContent = ""
+    listaValores.length = 0
 }

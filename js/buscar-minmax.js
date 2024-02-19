@@ -1,4 +1,5 @@
 let lista = [];
+let result = document.getElementById("Resultado");
 let pHTML = document.getElementById('listaValores')
 
 
@@ -13,35 +14,33 @@ function anadirValor(){
     }
 }
 
-function buscar(){
-    let valorInput = parseFloat(document.querySelector('input').value);
-    if(lista.length === 0){
-        alert("La lista esta vacia")
-    }else{
-        for(let i = 0; i < lista.length; i++){
-            if(lista[i]== valorInput){
-                return true
-            }
+function buscarMenor(){
+    let menor = lista[0];
+    for(let i = 0; i < lista.length ; i++){
+        if(lista[i] < menor){
+            menor = lista[i];
         }
-        return false
-    }
+    } return menor
 }
 
+function buscarMayor(){
+    let mayor = lista[0];
+    for(let i = 0; i < lista.length ; i++){
+        if (lista[i] > mayor){
+            mayor = lista[i];
+        }
+    } return mayor;
+}
 
 function resultado(){
-    let valorInput = parseFloat(document.querySelector('input').value);
-    
-    if(!isNaN(valorInput)){
-        if(buscar()){
-            let p = document.createElement('p')
-            p.textContent = "Se encontro el numero"
-            mostrar("#Resultado",p,"numero");
-        }else{
-            let p = document.createElement('p')
-            p.textContent = "No se encontro el numero"
-            mostrar("#Resultado",p,"numero")
-    }
-    }else{
-        alert("Ingrese un valor para buscarlo")
-    }
+    let p = document.createElement('p')
+    let texto = (`El numero menor es ${buscarMenor()} y el mayor es ${buscarMayor()}`)
+    p.textContent = texto
+    mostrar('#Resultado',p,'numero');
+}
+
+function resetear(){
+    result.textContent = ""
+    pHTML.textContent = ""
+    listaValores.length = 0
 }

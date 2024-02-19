@@ -12,9 +12,12 @@
         <h1>Encuentra valores</h1>
     </header>
     <main>
-        <input type="number" id="numero">
+        <div class="Data">
+            <input type="number" id="numero" placeholder="Añade valores a la lista">
+            <button class="reset" onclick="resetear();">Resetear lista</button>
+        </div>
         <button class="Calcular" onclick="anadirValor();">Ingresa valores a la lista</button>
-        <button class="Calcular" onclick="resultado();">Busca el valore</button>
+        <button class="Calcular" onclick="resultado();">Busca el valores</button>
         <p>La lista de valores es: <span id="listaValores"></span></p>
         <p id="Resultado"></p>
     </main>

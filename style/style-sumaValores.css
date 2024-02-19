@@ -21,14 +21,9 @@ main label,input{
     margin: 0px auto;
 }
 
-label{
-    padding: 20px;
-    font-size: 25px;
-}
-
 input{
     width:300px;
-    padding: 5px
+    padding: 5px;
 }
 
 .Data{
@@ -49,6 +44,7 @@ input{
     color:white;
     cursor: pointer;
 }
+
 .Calcular{
     background-color: rgba(27, 103, 233, 0.797);
     border-radius: 10px;
@@ -58,7 +54,7 @@ input{
     display: inline-block;
     margin: 15px 10px;
     position: relative;
-    left: 280px;
+    left: 200px;
 }
 
 .Calcular:hover{
@@ -72,7 +68,6 @@ p{
     display: inline-block;
     margin: 10px auto;
     text-align: center;
-    padding: 15px;
     font-size: 20px;
 }
 
@@ -90,7 +85,7 @@ p{
     font-size: 15px;
     display: block;
     position: relative;
-    left:800px;
+    left:850px;
     cursor: pointer;
 }
 
