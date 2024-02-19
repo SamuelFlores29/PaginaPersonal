@@ -2,19 +2,11 @@ let listaHTML= document.getElementById("listaValores");
 let resultado = document.getElementById("Resultado");
 var listaValores = [];
 
-function mostrarValores(){
-    listaHTML.innerHTML= listaValores;
-}
-
 function anadirValor(){
     let valor = parseFloat(document.querySelector("input").value);
     listaValores.push(valor)
-    limpiar();
-    mostrarValores();
-    console.log(listaValores)
-}
-function limpiar(){
-    document.querySelector("input").value= "";
+    limpiar('listaValores');
+    mostrar('#listaValores',listaValores,'numero');
 }
 
 function promedio(){
