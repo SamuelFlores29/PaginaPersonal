@@ -42,5 +42,5 @@ function resultado(){
 function resetear(){
     result.textContent = ""
     pHTML.textContent = ""
-    listaValores.length = 0
+    lista.length = 0
 }
