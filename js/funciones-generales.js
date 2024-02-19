@@ -1,5 +1,6 @@
 function mostrar(etiqueta,texto,idInput){
     let container = document.querySelector(etiqueta);
+    
 
     container.innerHTML = '';
     

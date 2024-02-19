@@ -1,24 +1,47 @@
 let lista = [];
-let mostrar = document.querySelector("#Resultado")
-function anadirValor(){
-    let numeros = parseFloat(document.querySelector("input").value);
-        if (numeros != ""){
-            lista.push(numeros)
-            limpiar();
-        }else{
-            alert("Ingresa un valor valido")
-        }
-    console.log(lista)
-};
+let pHTML = document.getElementById('listaValores')
 
-function limpiar(){
-    document.querySelector("input").value = ""
+
+function anadirValor(){
+    let valorInput = parseFloat(document.querySelector('input').value);
+    if(!isNaN(valorInput)){
+        lista.push(valorInput);
+        limpiarInput('numero');
+        pHTML.textContent = lista
+    }else{
+        alert("Ingresa valores")
+    }
 }
 
-function suma  (){
-    let numero = lista[0]
-        for(let i = 1; i<= lista.length - 1; i++){
-            numero += lista[i]
+function buscar(){
+    let valorInput = parseFloat(document.querySelector('input').value);
+    if(lista.length === 0){
+        alert("La lista esta vacia")
+    }else{
+        for(let i = 0; i < lista.length; i++){
+            if(lista[i]== valorInput){
+                return true
+            }
         }
-    mostrar.innerHTML = numero;
+        return false
+    }
+}
+
+
+function resultado(){
+    let valorInput = parseFloat(document.querySelector('input').value);
+    
+    if(!isNaN(valorInput)){
+        if(buscar()){
+            let p = document.createElement('p')
+            p.textContent = "Se encontro el numero"
+            mostrar("#Resultado",p,"numero");
+        }else{
+            let p = document.createElement('p')
+            p.textContent = "No se encontro el numero"
+            mostrar("#Resultado",p,"numero")
+    }
+    }else{
+        alert("Ingrese un valor para buscarlo")
+    }
 }

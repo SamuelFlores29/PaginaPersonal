@@ -20,7 +20,13 @@ function calcularMultiplicacino() {
 }  
 
 function resultado(){
-    
-    mostrar('#tabla',calcularMultiplicacino(),'numero')
+    let inp = parseFloat(document.getElementById("numero").value)
+
+    if(!isNaN(inp)){
+        mostrar('#tabla',calcularMultiplicacino(),'numero')
+    }else{
+        alert("Ingresa un numero")
+    }
+   
 }
 
