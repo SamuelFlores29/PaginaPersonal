@@ -26,9 +26,33 @@ label{
     padding: 20px;
 }
 
-input{
+.Data{
+    width: 940px;
+    margin: 0px auto;
+}
+
+#texto{
+    display:block;
+    margin:0px auto;
     width:300px;
     padding: 5px
+}
+
+.reset{
+    position: absolute;
+    right: 380px;
+    top: 130px;
+    background-color: rgba(148, 50, 50, 0.684);
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px 10px;
+    color:white;
+    cursor: pointer;
+}
+
+.muestraListas{
+    margin: 30px;
 }
 
 .Calcular{
@@ -37,8 +61,8 @@ input{
     border: none;
     padding: 10px 15px;
     font-size: 15px;
-    display: block;
-    margin: 15px auto;
+    display: inline-block;
+    margin: 15px 20px;
 }
 
 .Calcular:hover{
@@ -47,12 +71,11 @@ input{
     transition: 30ms;
 }
 
-div{
+.botones{
     width: 940px;
     display: inline-block;
     margin: 10px auto;
     text-align: center;
-    padding: 15px;
     font-size: 20px;
 }
 
@@ -72,4 +95,67 @@ div{
     position: relative;
     left:800px;
     cursor: pointer;
+}
+
+@media screen and (max-width:480px) {
+    header{
+        width: calc(100% - 45px);
+        height: 100px;
+        margin: 0px auto;
+        padding: 10px;
+        display:block;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .Data{
+        width: auto;
+    }
+
+    #texto{
+        position: absolute;
+        width: 250px;
+        left: 14px;
+    }
+
+    .reset{
+        position: relative;
+        left: 275px;
+        top: -8px;
+    }
+
+    .muestraListas p{
+        margin: 10px;
+        margin-top: 30px;
+    }
+
+    #ListaHTML,#ListaAlrevez{
+        text-align: center;
+        display: block;
+    }
+
+    .Calcular{
+        position: static;
+        display:inline-block;
+        font-size: 12px;
+    }
+    
+    .botones{
+        display: block;
+        width: auto;
+        margin: 5px  auto;
+    }
+
+    div{
+        width: auto;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .regreso{
+        position: static;
+        margin: 0px auto;
+    }
 }
