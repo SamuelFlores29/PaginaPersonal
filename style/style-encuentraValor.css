@@ -49,15 +49,21 @@ main label,input{
     padding: 10px 15px;
     font-size: 15px;
     display: inline-block;
-    margin: 15px 10px;
-    position: relative;
-    left: 200px;
+    margin: 15px 20px;
 }
 
 .Calcular:hover{
     cursor: pointer;
     transform: scale(1.1);
     transition: 30ms;
+}
+
+.botones{
+    width: 940px;
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 20px;
 }
 
 p{
@@ -82,7 +88,7 @@ p{
     font-size: 15px;
     display: block;
     position: relative;
-    left:850px;
+    left:800px;
     cursor: pointer;
 }
 

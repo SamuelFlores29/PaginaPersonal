@@ -21,26 +21,31 @@ main label,input{
     margin: 0px auto;
 }
 
+
 .Data{
     width: 940px;
-    display: inline-block;
-    width:300px;
-    padding: 5px;
+    margin: 0px auto;
 }
-
 #numero{
-    display: inline-block;
-    margin-left: 250px;
+    display:block;
+    margin:0px auto;
+    width:300px;
+    padding: 5px
 }
 
 .reset{
+    position: absolute;
+    right: 360px;
+    top: 66px;
     background-color: rgba(148, 50, 50, 0.684);
     border: none;
-    border-radius: 15px;
-    margin: 5px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px 10px;
     color:white;
     cursor: pointer;
 }
+
 
 .Calcular{
     background-color: rgba(27, 103, 233, 0.797);
@@ -50,8 +55,6 @@ main label,input{
     font-size: 15px;
     display: inline-block;
     margin: 15px 10px;
-    position: relative;
-    left: 200px;
 }
 
 .Calcular:hover{
@@ -59,6 +62,16 @@ main label,input{
     transform: scale(1.1);
     transition: 30ms;
 }
+
+
+.botones{
+    width: 940px;
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 20px;
+}
+
 
 p{
     width: 940px;
@@ -82,7 +95,7 @@ p{
     font-size: 15px;
     display: block;
     position: relative;
-    left:850px;
+    left:800px;
     cursor: pointer;
 }
 
