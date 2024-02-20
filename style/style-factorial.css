@@ -73,3 +73,28 @@ div{
     left:800px;
     cursor: pointer;
 }
+
+@media screen and (max-width:480px) {
+    header{
+        width: calc(100% - 45px);
+        height: 20%;
+        margin: 10px auto;
+    }
+
+    h1{
+        margin:50px 0px 0px 0px;
+    }
+
+    main{
+        width: auto;
+    }
+
+    div{
+        width: auto;
+    }
+
+    .regreso{
+        position: static;
+        margin: 0px auto;
+    }
+}
