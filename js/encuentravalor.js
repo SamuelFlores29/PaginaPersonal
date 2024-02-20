@@ -1,7 +1,8 @@
 let lista = [];
 let pHTML = document.getElementById('listaValores');
 let rest = document.getElementById('Resultado');
-
+let posicion;
+let encontrado;
 
 function anadirValor(){
     let valorInput = parseFloat(document.querySelector('input').value);
@@ -21,10 +22,11 @@ function buscar(){
     }else{
         for(let i = 0; i < lista.length; i++){
             if(lista[i]== valorInput){
-                return true
+                posicion = i;
+                return {encontrado: true,posicion:i}
             }
         }
-        return false
+        return {encontrado:false,posicion: -1}
     }
 }
 
@@ -35,7 +37,7 @@ function resultado(){
     if(!isNaN(valorInput)){
         if(buscar()){
             let p = document.createElement('p')
-            p.textContent = "Se encontro el numero"
+            p.textContent = `El numero se encontro, esta en la posicion ${buscar().posicion + 1 }`
             mostrar("#Resultado",p,"numero");
         }else{
             let p = document.createElement('p')
@@ -50,5 +52,5 @@ function resultado(){
 function resetear(){
     rest.textContent = ""
     pHTML.textContent = ""
-    listaValores.length = 0
+    lista.length = 0
 }
