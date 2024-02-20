@@ -76,3 +76,33 @@ div{
     cursor: pointer;
 }
 
+@media screen and (max-width:480px) {
+    header{
+        width: calc(100% - 45px);
+        height: 100px;
+        margin: 0px auto;
+        padding: 10px;
+        display:block;
+    }
+
+    main{
+        width: auto;
+    }
+
+    .Calcular{
+        position: static;
+        display: inline;
+        font-size: 12px;
+    }
+
+    div{
+        width: auto;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .regreso{
+        position: static;
+        margin: 0px auto;
+    }
+}
