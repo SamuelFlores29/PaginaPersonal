@@ -50,3 +50,36 @@ nav ul li:hover{
     background: linear-gradient(to bottom right, #40AAD7,#40D7C6);
     transform: scale(1.1);
 }
+
+@media screen and (max-width:480px){
+    header{
+        width: calc(100% - 45px);
+        height: 20%;
+        margin: 10px auto;
+    }
+
+    .Titulo-principal{
+        width: 100%;
+        font-size: 5vw;
+        position: static;
+    }
+
+    header img{
+        display: block;
+        position: static;
+        width: 80%;
+        margin: 10px auto;
+
+    }
+
+    nav{
+        margin: 60px auto;
+    }
+
+    nav ul li{
+        display: inline-block;
+        width: 100px;
+        margin: 20px auto;
+        font-size: 10px;
+    }
+}
