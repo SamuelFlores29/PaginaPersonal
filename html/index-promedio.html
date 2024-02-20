@@ -19,8 +19,11 @@
             <input type="number" id="numero" placeholder="Añade valores a la lista">
             <button class="reset" onclick="resetear();">Resetear lista</button>
         </div>
-        <button class="Calcular" onclick="anadirValor();">Ingresa valores a la lista</button>
-        <button class="Calcular" onclick="promedio();">Calcula el promedio de valores</button><br>
+        <div class="botones" >
+            <button class="Calcular" onclick="anadirValor();">Añade e valor</button>
+            <button class="Calcular" onclick="promedio();"> Calcular</button>
+        </div>
+       
         <p>La lista de valores es: <span id="listaValores"></span></p>
         <p id="Resultado"></p>
     </main>

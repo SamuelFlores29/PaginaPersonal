@@ -22,7 +22,7 @@ function promedio(){
         for(let i = 0; i <= listaValores.length -1; i++){
             suma += listaValores[i]; 
            }
-           resultado.innerHTML = `El promedio es ${suma/listaValores.length}`
+           resultado.innerHTML = `El promedio es ${(suma/listaValores.length).toFixed(2)}`
     }
     
 }
@@ -32,3 +32,4 @@ function resetear(){
     listaHTML.textContent = ""
     listaValores.length = 0
 }
+

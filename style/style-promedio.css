@@ -94,3 +94,50 @@ p{
     cursor: pointer;
 }
 
+@media screen and (max-width:480px) {
+    header{
+        width: calc(100% - 45px);
+        height: 100px;
+        margin: 0px auto;
+        padding: 10px;
+        display:block;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .Data{
+        width: auto;
+    }
+
+    #numero{
+        width: 200px;
+        margin: 0px 10px 0px 20px;
+    }
+    
+    .botones{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .Calcular{
+        position: static;
+        
+    }
+
+    p{
+        width: auto;
+        display: block;
+    }
+
+    #resultado{
+        display: block;
+        margin: 0px auto;
+    }
+
+    .regreso{
+        position: static;
+        margin: 70px auto 0px;
+    }
+}
