@@ -78,11 +78,9 @@ div{
     header{
         width: calc(100% - 45px);
         height: 20%;
-        margin: 10px auto;
-    }
-
-    h1{
-        margin:50px 0px 0px 0px;
+        margin: 0px auto;
+        padding: 10px;
+        display:block;
     }
 
     main{
