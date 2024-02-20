@@ -26,11 +26,6 @@ label{
     font-size: 25px;
 }
 
-input{
-    width:300px;
-    padding: 5px
-}
-
 .Data{
     width: 940px;
     display: inline-block;
@@ -39,6 +34,8 @@ input{
 #numero{
     display: inline-block;
     margin-left: 250px;
+    width:300px;
+    padding: 5px
 }
 
 .reset{
@@ -94,3 +91,46 @@ p{
     cursor: pointer;
 }
 
+@media screen and (max-width:480px) {
+    header{
+        width: calc(100% - 45px);
+        height: 100px;
+        margin: 0px auto;
+        padding: 10px;
+    }
+
+    main, .Data{
+        width: 100%;
+    }
+
+    #numero{
+        width: 250px;
+        margin-left: 25px;
+    }
+
+    .botones{
+        width: 100%;
+        text-align: center;
+        margin: 5px  auto;
+    }
+
+    .Calcular{
+        position: static;
+        display:inline-block;
+        font-size: 12px;
+    }
+
+    p{
+        width: auto;
+        padding: 0px;
+    }
+
+    #Resultado{
+        margin: 10px;
+    }
+
+    .regreso{
+        position: static;
+        margin: 15px auto;
+    }
+}
