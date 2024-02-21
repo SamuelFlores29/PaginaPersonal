@@ -6,7 +6,7 @@ function perimetro(){
     //Validacion si los campos input se encuentran vacios
     if(!isNaN(anchura && altura)){
         let perimetro = 2*(anchura*altura);
-        return mostrar("div","El perimetro es " + perimetro);
+        return mostrar("#resultado","El perimetro es " + perimetro);
     }else{
         return alert("Integrasa valores en altura y ancho")
     }
@@ -21,7 +21,7 @@ function area(){
     //Validacion si los campos input se encuentran vacios
     if(!isNaN(anchura && altura)){
         let area = altura*anchura;
-        return mostrar("div","El area es " + area);
+        return mostrar("#resultado","El area es " + area);
     }else{
         return alert("Integrasa valores en altura y ancho")
     }
