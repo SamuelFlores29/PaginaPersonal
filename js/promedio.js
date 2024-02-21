@@ -2,23 +2,29 @@ let listaHTML= document.getElementById("listaValores");
 let resultado = document.getElementById("Resultado");
 var listaValores = [];
 
+//Funcion para añadir valores a la lista
 function anadirValor(){
     let valor = parseFloat(document.querySelector("input").value);
+
+    //Validamos que el input no este vacio
     if(!isNaN(valor)){
-        listaValores.push(valor)
-        listaHTML.textContent = listaValores;
-        limpiarInput('numero');
-        console.log(listaValores)
+        listaValores.push(valor) //Añadimos el valor a la lista
+        listaHTML.textContent = listaValores; //Mostramos el contenido de la lista
+        limpiarInput('numero'); //Limpiamos el input
     }else{
         alert("Porfavor ingrese valor al input")
     }
 }
 
+//Funcion para calcular el promedio
 function promedio(){
     var suma = 0;
+
+    //Validamos que la lista no este vacia
     if(listaValores.length === 0){
         alert("Añada valores a lista")
     }else{
+        //Recorremos la lista y almacenamos la suma en la variable suma
         for(let i = 0; i <= listaValores.length -1; i++){
             suma += listaValores[i]; 
            }
@@ -27,6 +33,7 @@ function promedio(){
     
 }
 
+//Resetamos la pagina
 function resetear(){
     resultado.textContent = ""
     listaHTML.textContent = ""
