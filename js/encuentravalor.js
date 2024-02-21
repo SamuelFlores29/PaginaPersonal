@@ -35,7 +35,7 @@ function resultado(){
     let valorInput = parseFloat(document.querySelector('input').value);
     
     if(!isNaN(valorInput)){
-        if(buscar()){
+        if(buscar().encontrado){
             let p = document.createElement('p')
             p.textContent = `El numero se encontro, esta en la posicion ${buscar().posicion + 1 }`
             mostrar("#Resultado",p,"numero");
