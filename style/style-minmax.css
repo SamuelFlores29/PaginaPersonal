@@ -15,7 +15,12 @@ main{
     margin: 0px auto;
 }
 
-main label,input{
+.Data{
+    width: 940px;
+    display: inline-block;
+}
+
+.Data label,input{
     text-align: center;
     display: block;
     margin: 0px auto;
@@ -24,11 +29,6 @@ main label,input{
 label{
     padding: 20px;
     font-size: 25px;
-}
-
-.Data{
-    width: 940px;
-    display: inline-block;
 }
 
 #numero{

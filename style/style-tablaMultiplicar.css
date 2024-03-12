@@ -56,10 +56,8 @@ input{
     font-size: 20px;
 }
 
-.regreso a{
-    text-decoration: none;
-    font-size: 15px;
-    color: black;
+li{
+    margin-bottom: 7px;
 }
 
 .regreso{
@@ -74,9 +72,10 @@ input{
     cursor: pointer;
 }
 
-#tabla{
-    position: relative;
-    right: 30px;
+.regreso a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
 }
 
 @media screen and (max-width:480px) {
@@ -106,11 +105,6 @@ input{
     .contenedorTabla{
         width: auto;
         display: block;
-        margin: 0px auto;
-    }
-
-    #tabla{
-        position: static;
         margin: 0px auto;
     }
 

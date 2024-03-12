@@ -15,15 +15,15 @@ main{
     margin: 0px auto;
 }
 
-main label,input{
-    text-align: center;
-    display: block;
-    margin: 0px auto;
-}
-
 .Data{
     width: 940px;
     display: inline-block;
+}
+
+.Data label,input{
+    text-align: center;
+    display: block;
+    margin: 0px auto;
 }
 
 #numero{

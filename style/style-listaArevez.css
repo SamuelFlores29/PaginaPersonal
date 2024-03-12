@@ -16,7 +16,12 @@ main{
     font-size: 25px;
 }
 
-main label,input{
+.Data{
+    width: 940px;
+    margin: 0px auto;
+}
+
+Data label,input{
     text-align: center;
     display: block;
     margin: 0px auto;
@@ -24,11 +29,6 @@ main label,input{
 
 label{
     padding: 20px;
-}
-
-.Data{
-    width: 940px;
-    margin: 0px auto;
 }
 
 #texto{
@@ -41,7 +41,7 @@ label{
 .reset{
     position: absolute;
     right: 380px;
-    top: 130px;
+    top: 90px;
     background-color: rgba(148, 50, 50, 0.684);
     border: none;
     border-radius: 10px;
@@ -53,6 +53,14 @@ label{
 
 .muestraListas{
     margin: 30px;
+}
+
+.botones{
+    width: 940px;
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 20px;
 }
 
 .Calcular{
@@ -69,14 +77,6 @@ label{
     cursor: pointer;
     transform: scale(1.1);
     transition: 30ms;
-}
-
-.botones{
-    width: 940px;
-    display: inline-block;
-    margin: 10px auto;
-    text-align: center;
-    font-size: 20px;
 }
 
 .regreso a{
@@ -121,9 +121,10 @@ label{
     }
 
     .reset{
-        position: relative;
-        left: 275px;
-        top: -8px;
+        position: absolute;
+        left: 280px;
+        top: 135px;
+        width: 50px;
     }
 
     .muestraListas p{
@@ -146,12 +147,6 @@ label{
         display: block;
         width: auto;
         margin: 5px  auto;
-    }
-
-    div{
-        width: auto;
-        display: block;
-        margin: 0px auto;
     }
 
     .regreso{

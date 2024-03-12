@@ -15,17 +15,17 @@ main{
     margin: 0px auto;
 }
 
-main label,input{
+.Data{
+    width: 940px;
+    margin: 0px auto;
+}
+
+.Data label,input{
     text-align: center;
     display: block;
     margin: 0px auto;
 }
 
-
-.Data{
-    width: 940px;
-    margin: 0px auto;
-}
 #numero{
     display:block;
     margin:0px auto;
