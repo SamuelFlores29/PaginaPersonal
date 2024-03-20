@@ -17,7 +17,7 @@ boton.addEventListener("click",(e)=>{
     e.preventDefault();
     let marcador = L.marker([lat, long]).addTo(map)
     .bindPopup(`Punto ubicado en </br> Latitud:${lat} </br> Longitud ${long}`)
-    map.setView([lat,long],5)
+    map.setView([lat,long],20)
     listaPuntos.push(marcador._latlng);
 })
 

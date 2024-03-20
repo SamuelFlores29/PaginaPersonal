@@ -1,134 +1,93 @@
-body{
-    background: linear-gradient(to bottom right, #40AAD7,#40D7C6);
-    width: 100vw; /* Establece el ancho del cuerpo al ancho completo de la ventana */
-    height: 100vh /* Establece la altura del cuerpo a la altura completa de la ventana */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #40AAD7, #40D7C6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h1{
+header {
     text-align: center;
     font-size: 35px;
     margin: 20px;
+    color: #fff;
 }
 
-main{
-    width: 940px;
-    margin: 0px auto;
-}
-
-.Data{
-    width: 940px;
-    display: inline-block;
-}
-
-.Data label,input{
-    text-align: center;
-    display: block;
-    margin: 0px auto;
-}
-
-#numero{
-    display: inline-block;
-    margin-left: 250px;
-    width:300px;
-    padding: 5px;
-}
-
-.reset{
-    background-color: rgba(148, 50, 50, 0.684);
-    border: none;
+main {
+    width: 80%;
+    max-width: 940px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    margin: 5px;
-    color:white;
-    cursor: pointer;
+    padding: 20px;
 }
 
-.Calcular{
+.Data, .botones {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.Data input[type="number"] {
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.reset, .Calcular {
     background-color: rgba(27, 103, 233, 0.797);
     border-radius: 10px;
     border: none;
     padding: 10px 15px;
     font-size: 15px;
-    display: inline-block;
-    margin: 15px 20px;
-}
-
-.Calcular:hover{
+    color: #fff;
     cursor: pointer;
+    margin-left: 10px;
+}
+
+.reset:hover, .Calcular:hover {
+    background-color: rgba(27, 103, 233, 1);
     transform: scale(1.1);
-    transition: 30ms;
+    transition: 0.3s;
 }
 
-.botones{
-    width: 940px;
-    display: inline-block;
-    margin: 10px auto;
-    text-align: center;
-    font-size: 20px;
-}
-
-p{
-    width: 940px;
-    display: inline-block;
-    margin: 10px auto;
-    text-align: center;
-    font-size: 20px;
-}
-
-.regreso a{
+.regreso a {
     text-decoration: none;
     font-size: 15px;
-    color: black;
+    color: #000;
 }
 
-.regreso{
+.regreso {
     background-color: rgba(0, 123, 255, 0.507);
     border-radius: 10px;
     border: none;
     padding: 10px 15px;
     font-size: 15px;
-    display: block;
-    position: relative;
-    left:800px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
-@media screen and (max-width:480px) {
-    header{
-        width: calc(100% - 45px);
-        height: 150px;
-        margin: 0px auto;
+@media screen and (max-width: 768px) {
+    main {
         padding: 10px;
     }
 
-    main, .Data{
-        width: 100%;
+    .Data, .botones {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #numero{
-        width: 250px;
-        margin-left: 25px;
+    .Data input[type="number"] {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
-    .botones{
-        width: 100%;
-        text-align: center;
-        margin: 5px  auto;
-    }
-
-    .Calcular{
-        position: static;
-        display:inline-block;
-        font-size: 12px;
-    }
-
-    p, #Resultado{
-        width: auto;
-        padding: 0px;
-        display: block;
-    }
-
-    .regreso{
-        position: static;
-        margin: 15px auto;
-    }
-}
+    .reset, .Calcular {
+        margin-left: 0;
+        margin-top: 10px;
+    }}
